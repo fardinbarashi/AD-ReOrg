@@ -1,0 +1,43 @@
+{
+  "domain": {
+    "server": "",
+    "searchBase": "auto",
+    "searchBase_info": "auto = the domain root DN is read from Active Directory at every start (Get-ADRootDSE defaultNamingContext, e.g. DC=env,DC=local) and placed in Root (SearchBase). Type a DN instead, e.g. OU=Groups,DC=corp,DC=local, to always start in that OU. server = optional domain controller to use; leave empty for automatic."
+  },
+  "defaults": {
+    "namePrefix": "",
+    "nameSuffix": "-NEW",
+    "samSuffix": "",
+    "nameFind": "",
+    "nameReplace": "",
+    "nameRegex": false,
+    "description": "",
+    "notes": "",
+    "copyDescription": true,
+    "addDescription": false,
+    "copyAddDescription": false,
+    "copyNotes": true,
+    "addNotes": false,
+    "copyAddNotes": false,
+    "groupScope": "Global",
+    "groupCategory": "Security",
+    "copyUsers": true,
+    "copyGroups": true,
+    "copyComputers": false,
+    "copyMemberOf": false,
+    "copyAttributes": "",
+    "onlyCopyExisting": false,
+    "nestNewInOld": true,
+    "whatIf": true,
+    "continueOnError": false
+  },
+  "report": {
+    "folder": "files",
+    "fileName": "report",
+    "openAfter": true
+  },
+  "logging": {
+    "folder": "logs",
+    "retentionDays": 30
+  }
+}

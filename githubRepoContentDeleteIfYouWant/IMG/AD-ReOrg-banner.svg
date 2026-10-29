@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="640" viewBox="0 0 1280 640" font-family="Segoe UI, Inter, Arial, sans-serif">
+  <title>AD ReOrg - Active Directory reorganisation toolkit</title>
+  <rect width="1280" height="640" fill="#16232F"/>
+  <!-- faint grid -->
+  <g stroke="#1E3042" stroke-width="1">
+    <path d="M0 80H1280M0 160H1280M0 240H1280M0 320H1280M0 400H1280M0 480H1280M0 560H1280"/>
+    <path d="M80 0V640M160 0V640M240 0V640M320 0V640M400 0V640M480 0V640M560 0V640M640 0V640M720 0V640M800 0V640M880 0V640M960 0V640M1040 0V640M1120 0V640M1200 0V640"/>
+  </g>
+
+  <!-- ===== Left: name and what it does ===== -->
+  <rect x="72" y="118" width="84" height="84" rx="14" fill="#0078D4"/>
+  <path d="M94 141 L116 160 L94 179 M121 182 H142" stroke="#FFFFFF" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+
+  <text x="72" y="292" font-size="72" font-weight="700" fill="#FFFFFF">AD ReOrg</text>
+  <text x="74" y="338" font-size="26" fill="#C9D6E3">Active Directory reorganisation toolkit</text>
+  <text x="74" y="374" font-size="18" fill="#9FB3C8">PowerShell + WPF  ·  preview and WhatIf before every change</text>
+
+  <g font-size="15" fill="#DCE7F2">
+    <rect x="72"  y="414" width="128" height="34" rx="17" fill="#22344A" stroke="#33485F"/><text x="136" y="436" text-anchor="middle">Create groups</text>
+    <rect x="210" y="414" width="134" height="34" rx="17" fill="#22344A" stroke="#33485F"/><text x="277" y="436" text-anchor="middle">Rename groups</text>
+    <rect x="354" y="414" width="160" height="34" rx="17" fill="#22344A" stroke="#33485F"/><text x="434" y="436" text-anchor="middle">Update attributes</text>
+    <rect x="524" y="414" width="134" height="34" rx="17" fill="#22344A" stroke="#33485F"/><text x="591" y="436" text-anchor="middle">Copy members</text>
+    <rect x="72"  y="458" width="96"  height="34" rx="17" fill="#22344A" stroke="#33485F"/><text x="120" y="480" text-anchor="middle">Compare</text>
+    <rect x="178" y="458" width="114" height="34" rx="17" fill="#22344A" stroke="#33485F"/><text x="235" y="480" text-anchor="middle">Snapshots</text>
+    <rect x="302" y="458" width="122" height="34" rx="17" fill="#22344A" stroke="#33485F"/><text x="363" y="480" text-anchor="middle">OU structure</text>
+    <rect x="434" y="458" width="164" height="34" rx="17" fill="#22344A" stroke="#33485F"/><text x="516" y="480" text-anchor="middle">Schema attributes</text>
+  </g>
+  <text x="74" y="548" font-size="15" fill="#7F93A8">Windows PowerShell 5.1  ·  RSAT ActiveDirectory module  ·  HTML / CSV / JSON reports</text>
+
+  <!-- ===== Right: the app window ===== -->
+  <g>
+    <rect x="694" y="96" width="520" height="452" rx="12" fill="#000000" opacity="0.28" transform="translate(6 8)"/>
+    <rect x="694" y="96" width="520" height="452" rx="12" fill="#EEF1F5"/>
+    <!-- title bar -->
+    <path d="M706 96 H1202 A12 12 0 0 1 1214 108 V134 H694 V108 A12 12 0 0 1 706 96 Z" fill="#0F1A24"/>
+    <rect x="708" y="105" width="20" height="20" rx="4" fill="#0078D4"/>
+    <path d="M712.5 110.5 L717.5 115 L712.5 119.5 M719 121 H724" stroke="#FFFFFF" stroke-width="1.8" stroke-linecap="round" fill="none"/>
+    <text x="736" y="120" font-size="12" font-weight="700" fill="#FFFFFF">AD ReOrg</text>
+    <text x="796" y="120" font-size="11" fill="#9FB3C8">v2.1</text>
+    <rect x="1086" y="106" width="116" height="18" rx="9" fill="#22344A"/>
+    <circle cx="1098" cy="115" r="3.5" fill="#4ADE80"/>
+    <text x="1106" y="119" font-size="10" fill="#FFFFFF">Connected</text>
+
+    <!-- sidebar -->
+    <path d="M694 134 H820 V548 H706 A12 12 0 0 1 694 536 Z" fill="#1C2B3A"/>
+    <g font-size="9" font-weight="700" fill="#9FB3C8">
+      <text x="708" y="156">GROUPS</text><text x="708" y="262">COMPARE</text><text x="708" y="306">SNAPSHOTS</text><text x="708" y="372">ENVIRONMENT</text>
+    </g>
+    <g font-size="11" fill="#C9D6E3">
+      <text x="712" y="176">Create groups</text>
+      <rect x="702" y="184" width="110" height="22" rx="5" fill="#2B4A66"/><rect x="702" y="184" width="3" height="22" fill="#5FB0F0"/>
+      <text x="712" y="199" fill="#FFFFFF" font-weight="700">Rename groups</text>
+      <text x="712" y="222">Update attributes</text>
+      <text x="712" y="244">Copy members</text>
+      <text x="712" y="284">Compare</text>
+      <text x="712" y="328">Snapshot users</text>
+      <text x="712" y="350">Snapshot groups</text>
+      <text x="712" y="394">OU structure</text>
+      <text x="712" y="416">Schema attributes</text>
+    </g>
+
+    <!-- content -->
+    <text x="836" y="162" font-size="15" font-weight="700" fill="#1F2933">Rename groups</text>
+    <text x="962" y="162" font-size="10" fill="#5B6472">Same groups, new names</text>
+    <!-- rule card -->
+    <rect x="836" y="174" width="364" height="66" rx="8" fill="#FFFFFF" stroke="#DDE3EA"/>
+    <text x="848" y="192" font-size="9" font-weight="700" fill="#4B5563">Find</text>
+    <rect x="848" y="197" width="160" height="22" rx="5" fill="#FFFFFF" stroke="#CBD3DD"/><text x="856" y="212" font-size="11" fill="#1F2933">OLD</text>
+    <text x="1020" y="192" font-size="9" font-weight="700" fill="#4B5563">Replace with</text>
+    <rect x="1020" y="197" width="168" height="22" rx="5" fill="#FFFFFF" stroke="#CBD3DD"/><text x="1028" y="212" font-size="11" fill="#1F2933">NEW</text>
+    <text x="848" y="233" font-size="9" fill="#4B5563">Apply to:  ✓ Name (CN)   ✓ sAMAccountName   ✓ displayName</text>
+    <!-- preview card -->
+    <rect x="836" y="250" width="364" height="226" rx="8" fill="#FFFFFF" stroke="#DDE3EA"/>
+    <text x="848" y="270" font-size="11" font-weight="700" fill="#1F2933">Preview</text>
+    <rect x="848" y="280" width="340" height="20" fill="#F5F7FA"/>
+    <g font-size="9" font-weight="700" fill="#374151"><text x="854" y="293">Status</text><text x="926" y="293">Current name</text><text x="1060" y="293">New name</text></g>
+    <g font-size="10" fill="#1F2933">
+      <rect x="854" y="307" width="44" height="15" rx="7.5" fill="#E3F5E9"/><text x="876" y="318" font-size="8.5" font-weight="700" fill="#145C2E" text-anchor="middle">Ready</text>
+      <text x="926" y="318">GRP_OLD_Sales</text><text x="1060" y="318" font-weight="700">GRP_NEW_Sales</text>
+      <line x1="848" y1="330" x2="1188" y2="330" stroke="#EEF1F5"/>
+      <rect x="854" y="337" width="44" height="15" rx="7.5" fill="#E3F5E9"/><text x="876" y="348" font-size="8.5" font-weight="700" fill="#145C2E" text-anchor="middle">Ready</text>
+      <text x="926" y="348">GRP_OLD_Finance</text><text x="1060" y="348" font-weight="700">GRP_NEW_Finance</text>
+      <line x1="848" y1="360" x2="1188" y2="360" stroke="#EEF1F5"/>
+      <rect x="854" y="367" width="44" height="15" rx="7.5" fill="#E3F5E9"/><text x="876" y="378" font-size="8.5" font-weight="700" fill="#145C2E" text-anchor="middle">Ready</text>
+      <text x="926" y="378">GRP_OLD_IT_Admin</text><text x="1060" y="378" font-weight="700">GRP_NEW_IT_Admin</text>
+      <line x1="848" y1="390" x2="1188" y2="390" stroke="#EEF1F5"/>
+      <rect x="854" y="397" width="44" height="15" rx="7.5" fill="#FDE8E8"/><text x="876" y="408" font-size="8.5" font-weight="700" fill="#9B1C1C" text-anchor="middle">Error</text>
+      <text x="926" y="408">GRP_OLD_Print</text><text x="1060" y="408" font-weight="700">GRP_NEW_Print</text>
+      <line x1="848" y1="420" x2="1188" y2="420" stroke="#EEF1F5"/>
+      <rect x="854" y="427" width="44" height="15" rx="7.5" fill="#E3F5E9"/><text x="876" y="438" font-size="8.5" font-weight="700" fill="#145C2E" text-anchor="middle">Ready</text>
+      <text x="926" y="438">GRP_OLD_Wifi</text><text x="1060" y="438" font-weight="700">GRP_NEW_Wifi</text>
+    </g>
+    <text x="848" y="464" font-size="9" fill="#5B6472">Groups to rename: 4  ·  1 error  ·  0 without a change</text>
+    <!-- action bar -->
+    <rect x="836" y="486" width="364" height="48" rx="8" fill="#FFFFFF" stroke="#DDE3EA"/>
+    <rect x="848" y="497" width="92" height="26" rx="6" fill="#E6EBF1"/><text x="894" y="514" font-size="10" fill="#26313D" text-anchor="middle">Check in AD</text>
+    <rect x="948" y="497" width="132" height="26" rx="6" fill="#FFF4D6"/>
+    <rect x="955" y="503" width="14" height="14" rx="3" fill="#FFFFFF" stroke="#9AA4B0"/><path d="M958 510 L961 513.5 L966.5 506.5" stroke="#7A5A00" stroke-width="1.8" fill="none"/>
+    <text x="975" y="514" font-size="10" font-weight="700" fill="#7A5A00">WhatIf - simulation</text>
+    <rect x="1088" y="497" width="100" height="26" rx="6" fill="#1B7A3D"/><text x="1138" y="514" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">Rename groups</text>
+  </g>
+</svg>

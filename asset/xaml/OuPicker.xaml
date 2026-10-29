@@ -1,0 +1,54 @@
+<Window xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Select an OU" Width="600" Height="640" MinWidth="440" MinHeight="420"
+        WindowStartupLocation="CenterOwner" ShowInTaskbar="False" ResizeMode="CanResizeWithGrip"
+        Background="#EEF1F5" FontFamily="Segoe UI" FontSize="13">
+  <Window.Resources>
+    <Style x:Key="Btn" TargetType="Button">
+      <Setter Property="Height" Value="34"/>
+      <Setter Property="MinWidth" Value="110"/>
+      <Setter Property="Padding" Value="16,0"/>
+      <Setter Property="Foreground" Value="White"/>
+      <Setter Property="Background" Value="#1E76BE"/>
+      <Setter Property="FontWeight" Value="SemiBold"/>
+      <Setter Property="Cursor" Value="Hand"/>
+      <Setter Property="Template">
+        <Setter.Value>
+          <ControlTemplate TargetType="Button">
+            <Border x:Name="Bd" Background="{TemplateBinding Background}" CornerRadius="8" Padding="{TemplateBinding Padding}">
+              <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </Border>
+            <ControlTemplate.Triggers>
+              <Trigger Property="IsMouseOver" Value="True"><Setter TargetName="Bd" Property="Opacity" Value="0.88"/></Trigger>
+              <Trigger Property="IsEnabled" Value="False"><Setter TargetName="Bd" Property="Opacity" Value="0.45"/></Trigger>
+            </ControlTemplate.Triggers>
+          </ControlTemplate>
+        </Setter.Value>
+      </Setter>
+    </Style>
+  </Window.Resources>
+  <DockPanel Margin="14">
+    <TextBlock DockPanel.Dock="Top" x:Name="TxtPickHint" Text="Expand the tree and click an OU, or search. Double-click selects." Foreground="#5B6472" Margin="0,0,0,8" TextWrapping="Wrap"/>
+    <Grid DockPanel.Dock="Top" Margin="0,0,0,10">
+      <Grid.ColumnDefinitions><ColumnDefinition Width="*"/><ColumnDefinition Width="Auto"/><ColumnDefinition Width="Auto"/></Grid.ColumnDefinitions>
+      <TextBox Grid.Column="0" x:Name="TxtPickSearch" Padding="6,0" VerticalContentAlignment="Center" Height="32"/>
+      <Button Grid.Column="1" x:Name="BtnPickSearch" Content="Search" Style="{StaticResource Btn}" Margin="8,0,0,0" MinWidth="90"/>
+      <Button Grid.Column="2" x:Name="BtnPickTree" Content="Show tree" Style="{StaticResource Btn}" Background="#E6EBF1" Foreground="#26313D" Margin="8,0,0,0" MinWidth="100" Visibility="Collapsed"/>
+    </Grid>
+    <DockPanel DockPanel.Dock="Bottom" Margin="0,10,0,0">
+      <StackPanel DockPanel.Dock="Right" Orientation="Horizontal">
+        <Button x:Name="BtnPickCancel" Content="Cancel" Style="{StaticResource Btn}" Background="#E6EBF1" Foreground="#26313D" Margin="0,0,8,0" IsCancel="True"/>
+        <Button x:Name="BtnPickOk" Content="Select" Style="{StaticResource Btn}" Background="#1B7A3D" IsEnabled="False" IsDefault="True"/>
+      </StackPanel>
+    </DockPanel>
+    <Border DockPanel.Dock="Bottom" Background="#F5F7FA" BorderBrush="#CBD3DD" BorderThickness="1" CornerRadius="6" Padding="10,7" Margin="0,10,0,0">
+      <TextBlock x:Name="TxtPickDN" Text="(nothing selected)" FontFamily="Consolas" FontSize="12" TextWrapping="Wrap"/>
+    </Border>
+    <Border Background="White" BorderBrush="#DDE3EA" BorderThickness="1" CornerRadius="10" Padding="6">
+      <Grid>
+        <TreeView x:Name="TreePick" BorderThickness="0" ScrollViewer.VerticalScrollBarVisibility="Auto" ScrollViewer.HorizontalScrollBarVisibility="Auto"/>
+        <ListBox x:Name="LstPick" BorderThickness="0" Visibility="Collapsed" ScrollViewer.HorizontalScrollBarVisibility="Auto"/>
+      </Grid>
+    </Border>
+  </DockPanel>
+</Window>
